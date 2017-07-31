@@ -1,4 +1,4 @@
-baseurl = "https://sufuq.com"
+baseurl = "http://sufuq.com"
 DefaultContentLanguage = "zh"
 title = "示水的程序客栈"
 theme = "beautifulhugo"
@@ -10,7 +10,7 @@ pygmentCodeFences = true
 
 [Params]
   subtitle = "点滴积累，点滴成长"
-  logo = "img/avatar-icon.png"
+  logo = "img/avatar-icon.jpg"
   favicon = "img/favicon.ico"
   dateFormat = "2006-01-02"
   commit = false
