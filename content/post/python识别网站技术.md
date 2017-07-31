@@ -5,11 +5,11 @@ subtitle: ""
 tags: [python]
 ---
 
-探测网站使用什么语言开发，服务框架等
+> 探测网站使用什么语言开发，服务框架等
 
 <!--more-->
 
-# python 识别网站所用技术
+
 > [builtwith](https://pypi.python.org/pypi/builtwith)
 > [python3中使用builtwith的方法](http://www.itwendao.com/article/detail/332500.html)
 
