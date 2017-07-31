@@ -7,7 +7,7 @@ tags: ["other", "python"]
 
 > `xpath`在解析`html`, `xml`很方便， 例如用爬虫去爬网页， 解析的节点提取数据
 
-<!-more-->
+<!--more-->
 
 
 ## 节点（node）

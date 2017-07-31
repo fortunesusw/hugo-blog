@@ -2,7 +2,7 @@
 title: "Python识别网站技术"
 date: 2017-07-31T19:10:43+08:00
 subtitle: ""
-tags: [python]
+tags: ["python"]
 ---
 
 > 探测网站使用什么语言开发，服务框架等

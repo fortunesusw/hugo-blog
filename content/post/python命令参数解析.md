@@ -6,7 +6,9 @@ tags: ["python"]
 ---
 
 > python中 getopt 模块，该模块是专门用来处理命令行参数的
+> 
 > 函数`getopt(args, shortopts, longopts = [])`
+> 
 > 参数args一般是`sys.argv[1:]`，shortopts 短格式 (-)， longopts 长格式(--)
 
 
