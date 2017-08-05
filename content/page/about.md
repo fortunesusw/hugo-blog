@@ -20,4 +20,5 @@ comments: false
 * python
 * php
 * lua
+* shell
 * html + css + js -- 前端三剑客

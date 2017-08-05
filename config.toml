@@ -89,3 +89,7 @@ pygmentCodeFences = true
     url = "tags"
     weight = 3
 
+[[menu.main]]
+    name = "Books"
+    url = "page/books/"
+    weight = 4
