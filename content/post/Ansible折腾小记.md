@@ -136,15 +136,17 @@ playbook 由一个或多个 `plays` 组成，它的内容是一个以 `plays` �
     ```
 
     playbook引用
-
-    ```yaml
-    ---
-    - hosts: merge
-      gather_facts: False
-      tasks:
-      - name: display Host Variable from hostfile
-        debug: msg="The key value is {{ key }}"
+    
     ```
+        ---
+        - hosts: merge
+          gather_facts: False
+          tasks:
+          - name: display Host Variable from hostfile
+            debug: msg="The key value is {{ key }}"
+    ```
+
+
 
 2. 通过文件定义主机以及主机组变量
 
@@ -167,16 +169,17 @@ playbook 由一个或多个 `plays` 组成，它的内容是一个以 `plays` �
     我们可以通过下面的方式：
 
     ```yaml
-    ---
-    - hosts: merge
-      gather_facts: False
-      tasks:
-      - name: register variable
-        shell: hostname
-        register: info
-      - name: display variable
-        debug: msg="The key value is {{ info }}"
+        ---
+        - hosts: merge
+        gather_facts: False
+        tasks:
+        - name: register variable
+            shell: hostname
+            register: info
+         - name: display variable
+            debug: msg="The key value is {{ info }}"
     ```
+
     info的结果是一段python字典数据，里面存储着很多信息，包括执行时间状态变化输出等。
     
 ### 变量的优先级
@@ -195,36 +198,34 @@ playbook 由一个或多个 `plays` 组成，它的内容是一个以 `plays` �
 1. 标准loops
     
     ```yaml
-    ---
-    - hosts: remote
-      gather_facts: False
-      tasks:
-      - name: debug loops
-        debug: msg="name ---------->  {{ item }}"
-        with_items:
-          - one
-          - two
+        ---
+        - hosts: remote
+          gather_facts: False
+          tasks:
+          - name: debug loops
+            debug: msg="name ---------->  {{ item }}"
+            with_items:
+              - one
+              - two
     ```
 
 2. 嵌套loops
 
     ```yaml
-    ---
-    - hosts: remote
-      gather_facts: False
-      tasks:
-      - name: debug loops
-        debug: msg="name ---------->  {{ item[0] }} ---------> {{ item[1] }}"
-        with_nested:
-          - ['A']
-          - ['a','b','c']
-    
-
+        ---
+        - hosts: remote
+          gather_facts: False
+          tasks:
+          - name: debug loops
+            debug: msg="name ---------->  {{ item[0] }} ---------> {{ item[1] }}"
+            with_nested:
+              - ['A']
+              - ['a','b','c']
     ```
     
-    3. 条件判断loops
+3. 条件判断loops
 
-        ```yaml
+    ```yaml
         ---
         - hosts: remote
           gather_facts: False
@@ -235,7 +236,7 @@ playbook 由一个或多个 `plays` 组成，它的内容是一个以 `plays` �
             until: host.stdout.startswith("test")
             retries: 5
             delay: 5
-        ```
+    ```
 
 ### playbook lookups
 Ansible还支持从外部数据拉取信息，比如我们可以从数据库拉取信息，然后赋值给一个变量。
@@ -243,14 +244,14 @@ Ansible还支持从外部数据拉取信息，比如我们可以从数据库拉�
 1. lookups file
     
     ```yaml
-    ---
-    - hosts: remote
-      gather_facts: False
-      vars:
-        contents: "{{ lookup('file', '/root/openrc') }}"
-      tasks:
-      - name: debug lookups
-        debug: msg="The contents is {% for i in contents.split("\n") %} {{ i }} {% endfor %}"
+        ---
+        - hosts: remote
+          gather_facts: False
+          vars:
+            contents: "{{ lookup('file', '/root/openrc') }}"
+          tasks:
+          - name: debug lookups
+            debug: msg="The contents is {% for i in contents.split("\n") %} {{ i }} {% endfor %}"
     ```
 
 2. lookups password
