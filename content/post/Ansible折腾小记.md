@@ -132,7 +132,8 @@ playbook 由一个或多个 `plays` 组成，它的内容是一个以 `plays` �
 
     [remote:vars]
     key=test
-    ```    
+
+    ```
 
     playbook引用
 
