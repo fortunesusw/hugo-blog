@@ -9,6 +9,8 @@ tags: ["ansible"]
 
 ansible是个什么东西呢？官方的title是“Ansible is Simple IT Automation”——简单的自动化IT工具， 对于自动化部署及管理很便捷， 基于ssh协议， python实现
 
+<!--more-->
+
 # 安装
 环境是mac， 直接使用homebrew
 
